@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+# the default for web-application-type is "servlet".. you can also put "none"
+spring:
+  main:
+    web-application-type: servlet
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      hibernate:
+        format_sql: true
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  datasource:
+    url: jdbc:postgresql://localhost:5332/jwt_security
+    username: dante
+    password: password123
+    driver-class-name: org.postgresql.Driver
+
